@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { IUserResponse } from 'src/app/interface/User.interface';
-import { UserService } from 'src/app/services/user/user.service';
+import { UserService } from '../../../../services/user/user.service';
+import {IUserResponse} from '../../../../interface/User.interface'
 
 @Component({
   selector: 'app-search',
