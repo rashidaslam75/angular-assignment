@@ -5,11 +5,5 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './user-grid.component.html',
   styleUrls: ['./user-grid.component.css']
 })
-export class UserGridComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class UserGridComponent {
 }

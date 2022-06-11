@@ -10,28 +10,24 @@
   </div>
 </form>
 
-
 <app-result *ngIf="filteredData?.items.length>0 && !isError" [data]="filteredData"></app-result>
 
-
-
-<div *ngIf="filteredData?.total_count==0 " class="flex justify-center items-center mt-8 flex-col ">
+<div *ngIf="filteredData?.total_count==0 " class="flex justify-center items-center mt-8 flex-col no-data ">
   <mat-chip-list>
-    <mat-chip color="warn" selected>No record found</mat-chip>
+    <mat-chip color="warn" id="title" class="title" selected>No record found</mat-chip>
   </mat-chip-list>
-  <div class="mt-4">
+  <div class="mt-4 message">
     Try to modify the filter to see the records here!
   </div>
 </div>
-<div *ngIf="isError" class="flex justify-center items-center mt-8 flex-col ">
+<div *ngIf="isError" class="flex justify-center items-center mt-8 flex-col exception ">
   <mat-chip-list>
-    <mat-chip color="warn" selected>Exception</mat-chip>
+    <mat-chip color="warn" class="title" selected>Exception</mat-chip>
   </mat-chip-list>
-  <div class="mt-4">
+  <div class="mt-4 message">
     We are unable to process the request, Please try again later.
   </div>
 </div>
 <div *ngIf="isLoading">
   <app-skeleton-user-grid></app-skeleton-user-grid>
-
 </div>

@@ -1,16 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { AbstractControl, FormControl } from '@angular/forms';
+import { Component, Input,  } from '@angular/core';
+import { AbstractControl,  } from '@angular/forms';
 
 @Component({
   selector: 'app-mat-error',
   templateUrl: './mat-error.component.html',
   styleUrls: ['./mat-error.component.css']
 })
-export class MatErrorComponent implements OnInit {
+export class MatErrorComponent {
   @Input() control: AbstractControl;
-  
-  constructor() {}
-  ngOnInit(): void {
-  }
-
 }

@@ -8,7 +8,7 @@ import { IUserResponse, User } from '../../../../interface/User.interface'
   templateUrl: './result.component.html',
   styleUrls: ['./result.component.css']
 })
-export class ResultComponent implements OnInit, OnChanges {
+export class ResultComponent implements OnChanges {
   @Input() data: IUserResponse;
 
   dataSource = new MatTableDataSource<User>();
@@ -21,15 +21,10 @@ export class ResultComponent implements OnInit, OnChanges {
     'type',
   ];
 
-  constructor() { }
-  
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['data']?.currentValue != changes['data']?.previousValue) {
       this.dataSource.data = this.data.items;
     }
-  }
-
-  ngOnInit(): void {
   }
 
   ngAfterViewInit(): void {
